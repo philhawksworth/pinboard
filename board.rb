@@ -33,19 +33,7 @@ end
 get %r{/boards/([\w]+)} do
   rows = db.execute( "select data from boards where name='prospects'" )
   @title =  "#{params[:captures].first}" 
-  @data = rows[0]
-  # @data = '{
-  #   "title": "Prospects",
-  #   "modifier": "Phil Hawksorth",
-  #   "modified": "5/4/2009 at 16:12",
-  #   "categories": ["questioning", "thinking", "designing", "building", "delivery"],
-  #   "cards" : [
-  #     {"name": "theteam website", "category": "designing"},
-  #     {"name": "Fat Duck", "category": "designing"},
-  #     {"name": "NHS", "category": "questioning"},
-  #     {"name": "Becta phase 1", "category": "building"}
-  #   ]
-  # }'  
+  @data = rows[0]  
   erb :index
 end
 
