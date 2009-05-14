@@ -159,4 +159,19 @@ ul#dustbin {
 		height:200px;
 		margin:10px 0;
 	}
+	
+#footer {
+	margin:40px 0;
+	border-top:solid 1px #666;
+	color:#666;
+	font-size:0.7em;
+	font-style:italic;
+}
 
+	#footer li {
+		margin-bottom:2px;
+	}
+
+	#footer a {
+		font-size:1em;
+	}
