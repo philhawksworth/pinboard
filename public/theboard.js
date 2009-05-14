@@ -34,7 +34,7 @@ $(document).ready(function() {
 			var txt = card.text();
 			var input = $("<input type='text' value='"+ txt +"'>");
 			card.html(input);
-			input.focus();
+			input.select();
 		} else {
 			setTitle(card);
 		}
@@ -65,8 +65,14 @@ $(document).ready(function() {
 		if(cat.hasClass('edit')){
 			var txt = cat.text();
 			var input = $("<input type='text' value='"+ txt +"'>");
-			cat.html(input);
-			input.focus();
+			var btn = $("<a href='#' class='delete' title='Delete this column'>delete column</a>");
+			btn.click(function(){
+				$(this).parents('td').remove();
+				resizeColumns();
+				return false;
+			});
+			cat.html(input).append(btn);
+			input.select();
 		} else {
 			setTitle(cat);
 		}
@@ -161,16 +167,13 @@ function jsonify() {
 
 function buildTable(data) {
 
-	$('#board').empty();
-
 	// build the bpard and the columns
 	var tbl = $('<table><tr></tr></table>');
-	// var width = (100 / data.categories.length) + '%';
 	for (var c=0; c < data.categories.length; c++) {
-		var td = $("<td><h2 class='title'>"+ data.categories[c] +"</h2><ul id='"+ data.categories[c] +"'></ul></td>");//.width(width);
+		var td = $("<td><h2 class='title'>"+ data.categories[c] +"</h2><ul id='"+ data.categories[c] +"'></ul></td>");
 		$('tr', tbl).append(td);
 	};
-	$('#board').append(tbl);
+	$('#board').empty().append(tbl);
 	
 	// populate the board with the data.
 	for (var c=0; c < data.cards.length; c++) {

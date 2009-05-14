@@ -93,6 +93,18 @@ a:hover, a:focus {
 			padding:0;
 		}
 
+		#board table td a.delete {
+			font-style:normal;
+			color:#777;
+			font-size:0.5em;
+			text-decoration:none;
+		}
+		#board table td a.delete:hover {
+			color:#444;
+			text-decoration:underline;
+		}
+	
+
 #board ul {
 	list-style:none;
 	height:100%;
@@ -161,7 +173,7 @@ ul#dustbin {
 	}
 	
 #footer {
-	margin:40px 0;
+	margin:40px 0 0 0;
 	border-top:solid 1px #666;
 	color:#666;
 	font-size:0.7em;
