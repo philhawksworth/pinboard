@@ -1,0 +1,6 @@
+Pinboard.
+
+A simple virtual pinboard for oganising index cards into columns for brainstorming and what-not. 
+Written in jQuery with a simple backend provided by Sinatra.
+
+Early days - more to come.
