@@ -96,6 +96,16 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+	
+	// deleting boards
+	$('#delete').click(function(){
+		$.ajax({
+			url: document.location.href,
+			type: "delete",
+			success: function(){ document.location.href = "/boards"; }
+		});
+		return false;
+	});
 
 });
 
