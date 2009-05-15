@@ -16,9 +16,10 @@ end
 
 # deliver a board json
 get %r{/boards/(.*)\.json} do
-  rows = db.execute( "select data from boards where name='prospects'" )
+  rows = db.execute( "select data from boards where name='#{params[:captures].first}'" )
   rows[0]  
 end
+
 
 # save an update to the DB.
 put %r{/boards/(.*)\.json} do
