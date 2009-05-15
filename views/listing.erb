@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>pinboard / boards</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Phil Hawksworth">
+	<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+
+	<h1>All boards</h1>
+	<ul>
+		<%= @boards %>
+	</ul>
+
+	<h2>Create a new board</h2>
+	<form action="/boards" method="post">
+		<label for='name'>Title:</label><input type='text' name='name' id='name' /><input type='submit' id='submit' value='create board' />
+	</form>
+
+	<div id="footer">
+		<ul>
+			<li>Pinboard version 0.1 was built by <a href="http://hawksworx.com/" title="PhilHawksworth" rel="me">Phil Hawksworth</a> with <a href="http://jquery" title='jQuery'>jQuery</a>, <a href="http://www.sinatrarb.com/" title="Sinatra">Sinatra</a> and a sprinkling of open web goodness.</li>
+			<li>fork me: <a href='http://github.com/philhawksworth/pinboard'>http://github.com/philhawksworth/pinboard</a></li>
+			<li>follow me: <a href='http://twitter.com/philhawksworth' rel="me">http://twitter.com/philhawksworth</a></li>
+		</ul>
+		
+	</div>
+
+</body>
+</html>
