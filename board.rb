@@ -32,7 +32,7 @@ end
 
 # deliver a board with UI
 get %r{/boards/([\w]+)} do
-  rows = db.execute( "select data from boards where name='prospects'" )
+  rows = db.execute( "select data from boards where name='#{params[:captures].first}'" )
   @title =  "#{params[:captures].first}" 
   @data = rows[0]  
   erb :index
