@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div id='metadata'>
-		<h1 id='boardName'><%= @title %></h1>
+		<h1 id='boardName'><a href='/boards'>boards /</a> <%= @title %></h1>
 		<dl>
 			<!-- <dt class='modifier'>Last modified by</dt>
 			<dd class='modifier'></dd> -->
@@ -25,10 +25,15 @@
 		<a href='#' class='add' title='Add a new card to the board'>new card</a>
 	</div>
 	<div id='board'></div>
-	<p>dustbin</p>
+	<h3>Dustbin</h3>
 	<ul id='dustbin'></ul>
-	<a href="#" id='delete'>Delete this board (careful...!)</a>
-	<a href="#" id='toggleImport'>Import/Export</a>
+	<h3>Options</h3>
+	<ul>
+		<li><a href="#" id='delete'>Delete this board (careful...!)</a></li>
+		<li><a href="#" id='toggleImport'>Import/Export</a></li>
+	</ul>
+	
+	
 	<div id='dataSource'>	
 		<textarea id='json'></textarea>
 		<a href="#" id='import'>Import</a>

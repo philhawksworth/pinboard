@@ -142,11 +142,15 @@ li.highlight {
 
 ul#dustbin {
 	height:2em;
-	background-color:#1c1c1c;
+	background-color:#111;
 	list-style:none;
-	margin:10px 0;
+	padding:10px;
+	border:solid 1px #111;
 }
 
+ul#dustbin.hover {
+	border:solid 1px #777;
+}
 	ul#dustbin li.card {
 		color: #999;
 		border:solid 1px #000;
@@ -187,3 +191,32 @@ ul#dustbin {
 	#footer a {
 		font-size:1em;
 	}
+
+h3 {
+	color:#999;
+}
+
+h1 {
+	color:#fff;
+}
+
+ul.listing {
+	border-bottom:solid 2px #000;
+	background-color:#E7E4D8;
+	padding:10px 0 10px 10px;
+	list-style-position:inside;
+}
+	ul.listing li {
+		font-size:1.5em;
+	}
+	ul.listing li a {
+		color:#333;
+		text-decoration:underline;
+
+	}
+	ul.listing li a:hover {
+		color:#000;
+		text-decoration:underline;
+		margin-bottom:4px;
+	}
+

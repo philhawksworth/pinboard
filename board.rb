@@ -4,8 +4,8 @@ require 'sqlite3'
 
 db = SQLite3::Database.new("theBoards.db")
 
-get '/about/?' do
-  "about the pinboard tool."
+get '/?' do
+  erb :home
 end
 
 get '/boards/?' do
@@ -28,10 +28,8 @@ end
 
 # delete a board
 delete %r{/boards/([\w]+)} do
-  
   name = "#{params[:captures].first}"  
   db.execute( 'delete from boards where name="'+ name +'"' )
-
 end
 
 

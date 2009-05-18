@@ -10,10 +10,6 @@
 	<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<h1>All boards</h1>
-	<ul class='listing'>
- 		<%= @boards %>
-	</ul>
 	<h1>Create a new board</h1>
 	<form action="/boards" method="post">
 		<input type='text' name='name' id='name' /> <input type='submit' id='submit' value='create board' />
