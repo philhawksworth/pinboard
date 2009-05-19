@@ -25,7 +25,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// setup the editting
+	// setup the editing
 	$('li.card').live("dblclick", function(ev){
 		var card = $(this);
 		card.toggleClass('edit');
@@ -99,11 +99,13 @@ $(document).ready(function() {
 	
 	// deleting boards
 	$('#delete').click(function(){
-		$.ajax({
-			url: document.location.href,
-			type: "delete",
-			success: function(){ document.location.href = "/boards"; }
-		});
+		if(confirm("Deleting this board will also delete all of its cards.")){
+			$.ajax({
+				url: document.location.href,
+				type: "delete",
+				success: function(){ document.location.href = "/boards"; }
+			});
+		}
 		return false;
 	});
 
