@@ -2,6 +2,8 @@ require 'rubygems'
 require 'sinatra'
 require 'sqlite3'
 
+set :port, 8080
+
 db = SQLite3::Database.new("theBoards.db")
 
 # create the db table if it doesn;t already exist.
